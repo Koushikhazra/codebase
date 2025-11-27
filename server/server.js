@@ -11,7 +11,8 @@ import topicRoutes from './routes/topics.js';
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors('http://localhost:5173'));
+
 app.use(express.json());
 
 // Connect to MongoDB

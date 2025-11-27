@@ -9,7 +9,7 @@ import { RevisionPage } from './components/RevisionPage';
 
 function ProtectedRoute({ children }) {
   const { user, initializing } = useApp();
-  // While we validate an existing token, don't redirect — show nothing (or a loader)
+  
   if (initializing) return null;
   return user ? children : <Navigate to="/login" replace />;
 }
