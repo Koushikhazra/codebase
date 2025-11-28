@@ -9,6 +9,7 @@ class ApiService {
       ...(token && { Authorization: `Bearer ${token}` })
     };
   }
+  
 
   // Auth methods
   async register(userData) {
