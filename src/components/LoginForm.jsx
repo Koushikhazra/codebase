@@ -3,7 +3,7 @@ import { User, Lock, Mail, UserPlus, LogIn } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { useNavigate } from 'react-router-dom';
 
-export function LoginForm(/* props removed - use AppContext instead */) {
+export function LoginForm() {
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({
     username: '',
@@ -35,7 +35,7 @@ export function LoginForm(/* props removed - use AppContext instead */) {
         navigate('/', { replace: true });
       }
     } catch (err) {
-      // AppContext sets error; we don't need to handle it here further
+       
     }
   };
 
@@ -61,7 +61,7 @@ export function LoginForm(/* props removed - use AppContext instead */) {
             <User className="w-8 h-8 text-blue-600 dark:text-blue-400" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-            DSA Revision Hub
+            CodeBase
           </h1>
           <p className="text-gray-600 dark:text-gray-300">
             {isLogin ? 'Welcome back!' : 'Create your account'}
