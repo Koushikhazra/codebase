@@ -71,7 +71,7 @@ export function QuestionsPage() {
       return matchesSearch && matchesTopic && matchesDifficulty && matchesStatus;
     });
   }, [questions, searchQuery, topicFilter, difficultyFilter, statusFilter]);
-
+const availableTopics = topics.filter(t => questions.some(q => q.topic === t.name));
  
   const questionsByTopic = useMemo(() => {
     const grouped = {};
@@ -210,7 +210,7 @@ export function QuestionsPage() {
               className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
             >
               <option value="all">All Topics</option>
-              {topics.map(topic => (
+              {availableTopics.map(topic => (
                 <option key={topic._id} value={topic.name}>{topic.name}</option>
               ))}
             </select>
