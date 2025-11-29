@@ -26,10 +26,10 @@ The platform is built with a focus on productivity, fast navigation, and a clean
 🗂️ Topic pre-filtering (click a topic → instantly shows relevant questions)
 ## Tech stack
 
-- Frontend: React (Vite), Tailwind CSS, Lucide icons
+- Frontend: React , Tailwind CSS, Lucide icons
 - Backend: Node.js, Express, Mongoose (MongoDB)
 - Auth: JWT (jsonwebtoken), password hashing with bcryptjs
-- Dev tools: Vite, concurrently, ESLint
+- Dev tools: Vite.
 
 ## Quick start (developer)
 
