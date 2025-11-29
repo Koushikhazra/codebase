@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
-import { Home, List, RotateCcw, Moon, Sun, LogOut } from 'lucide-react';
+import { Home, List, RotateCcw, Moon, Sun, LogOut,Code } from 'lucide-react';
 
 export function Layout({ children }) {
   const { 
@@ -38,7 +38,7 @@ export function Layout({ children }) {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
               <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-                  
+                   <Code className="w-6 h-6 mr-2 text-blue-600" />
                 Codebase
               </h1>
               
