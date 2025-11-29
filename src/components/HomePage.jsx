@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import { BookOpen, RotateCcw, Search } from 'lucide-react';
@@ -29,6 +29,9 @@ export function HomePage() {
   const filteredQuestions = questions.filter(q =>
     q.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  // Only show topics that have at least one question
+  const visibleTopics = topics.filter(topic => questions.some(q => q.topic === topic.name));
 
   const pickRandomQuestion = () => {
     getRandomQuestions(1).then(randomQuestions => {
@@ -170,7 +173,7 @@ export function HomePage() {
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Topics</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {topics.map(topic => {
+          {visibleTopics.map(topic => {
             const stats = getTopicStats(topic.name);
             const progress = stats.total > 0 ? (stats.revised / stats.total) * 100 : 0;
             
@@ -214,7 +217,7 @@ export function HomePage() {
           })}
         </div>
 
-{topics.length === 0 && (
+{visibleTopics.length === 0 && (
           <div className="text-center py-8 text-gray-500 dark:text-gray-400">
             <BookOpen className="w-12 h-12 mx-auto mb-3 opacity-50" />
             <p>No topics yet. Topics will appear automatically when you add questions!</p>
