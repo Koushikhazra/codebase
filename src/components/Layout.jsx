@@ -38,21 +38,7 @@ export function Layout({ children }) {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
               <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-                    <svg
-                  width="28"
-                  height="28"
-                  viewBox="0 0 64 64"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="mr-2"
-                >
-                  <circle cx="32" cy="32" r="30" fill="#0f172a" stroke="#06b6d4" strokeWidth="1" />
-                  <rect x="12" y="18" width="40" height="28" rx="2" fill="#075985" />
-                  <rect x="22" y="22" width="20" height="20" fill="#e6fdfd" />
-                  <rect x="28" y="28" width="8" height="8" fill="#0f172a" />
-                  <circle cx="34" cy="24" r="3" fill="#f59e0b" />
-                  <path d="M36 20 L40 16" stroke="#fff" strokeWidth="1.2" strokeLinecap="round" />
-                </svg>
+                  
                 Codebase
               </h1>
               
