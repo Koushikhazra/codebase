@@ -5,8 +5,7 @@ const AppContext = createContext(undefined);
 
 export function AppProvider({ children }) {
   const [user, setUser] = useState(null);
-  // true while we check existing token / auth status on app start
-  const [initializing, setInitializing] = useState(true);
+   const [initializing, setInitializing] = useState(true);
   const [questions, setQuestions] = useState([]);
   const [topics, setTopics] = useState([]);
   const [darkMode, setDarkMode] = useState(true);
@@ -15,18 +14,17 @@ export function AppProvider({ children }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Check for saved token and auto-login
+ 
     const token = localStorage.getItem('token');
     if (token) {
-      // attempt to validate token and load data
+      
       checkAuthStatus();
     } else {
-      // no token -> done initializing
+       
       setInitializing(false);
     }
 
-    // Restore dark mode preference from localStorage if present, otherwise
-    // fall back to system preference.
+    
     const storedDark = localStorage.getItem('darkMode');
     if (storedDark !== null) {
       setDarkMode(storedDark === 'true');
@@ -115,10 +113,10 @@ export function AppProvider({ children }) {
       const newQuestion = await apiService.createQuestion(questionData);
       setQuestions(prev => [newQuestion, ...prev]);
       
-      // Check if topic exists, if not add it to local state
+      
       const topicExists = topics.some(topic => topic.name === questionData.topic);
       if (!topicExists) {
-        await loadData(); // Reload to get the new topic
+        await loadData();  
       }
     } catch (error) {
       console.error('Error adding question:', error);
@@ -154,7 +152,7 @@ export function AppProvider({ children }) {
       try {
         localStorage.setItem('darkMode', next ? 'true' : 'false');
       } catch (e) {
-        // ignore storage errors
+        
       }
       return next;
     });
