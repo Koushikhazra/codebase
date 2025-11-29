@@ -16,8 +16,7 @@ const topicSchema = new mongoose.Schema({
     default: Date.now
   }
 });
-
-// Ensure unique topic per user
+ 
 topicSchema.index({ name: 1, userId: 1 }, { unique: true });
 
 export default mongoose.model('Topic', topicSchema);
