@@ -38,7 +38,7 @@ export function Layout({ children }) {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
               <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-                   <Code className="w-6 h-6 mr-1 text-blue-600" />
+                   <Code className="w-6 h-6 text-blue-600" />
                 Codebase
               </h1>
               
