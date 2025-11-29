@@ -136,30 +136,13 @@ The frontend uses `src/services/api.js` and expects the API at `http://localhost
 	- `context/AppContext.jsx` — app state and API wiring
 	- `services/api.js` — frontend API client
 - `package.json` — scripts and dependencies
-
-## Notes for contributors
-
-- Keep API changes backward-compatible where possible.
-- Add tests for new features (unit + integration) and update README with endpoints if you change them.
-- Formatting and linting: run `npm run lint` before opening a PR.
+ 
 
 ## Possible improvements / next steps
 
 - Add user profile and export/import of question bank
-- Add tagging and richer search (fuzzy search)
-- Add client-side tests (React Testing Library) and server tests (Jest + Supertest)
-- Add CI (GitHub Actions) to run lint and tests
+- Add tagging and richer search  
 
-## License
+ 
 
-This project is provided under the MIT License. See `LICENSE` (or add one) to include license text.
-
----
-
-If you'd like, I can also:
-
-- add screenshots or a demo GIF to the README
-- generate a small `.env.example` file
-- add a CONTRIBUTING.md and a basic GitHub Actions workflow to run linting
-
-Tell me which of those you'd like next and I will add them.
+ 
