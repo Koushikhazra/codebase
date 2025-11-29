@@ -12,7 +12,7 @@ export function RevisionPage() {
      getRandomQuestions(5).then(newQuestions => {
       setRevisionQuestions(newQuestions);
       setExpandedCode(new Set());
-      // initialize completedCount to number of already-revised questions
+       
       const initialRevised = newQuestions.filter(q => q.isRevised).length;
       setCompletedCount(initialRevised);
     });
@@ -28,7 +28,7 @@ export function RevisionPage() {
       lastRevisedDate: isRevised ? new Date().toISOString() : null
     });
 
-    // Update local state
+    
     setRevisionQuestions(prev => 
       prev.map(q => 
         q._id === questionId 
@@ -37,9 +37,9 @@ export function RevisionPage() {
       )
     );
 
-    // Update completed count based on previous value to avoid double increments
+    
     setCompletedCount(prev => {
-      // find previous state for this question
+ 
       const prevQ = revisionQuestions.find(q => q._id === questionId);
       const wasRevised = prevQ ? !!prevQ.isRevised : false;
       if (!wasRevised && isRevised) return prev + 1;
