@@ -11,7 +11,13 @@ import topicRoutes from './routes/topics.js';
 const app = express();
 
 // Middleware
-app.use(cors('http://localhost:5173'));
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://cdebase.netlify.app'
+  ]
+}));
+
 
 app.use(express.json());
 
