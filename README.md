@@ -2,10 +2,10 @@
 
 ✅ Project Description
 
-CodeVault is a full-stack web application designed to help developers organize, store, and revise coding questions efficiently.
+CodeBase is a full-stack web application designed to help developers organize, store, and revise coding questions efficiently.
 It provides a personalized environment where users can log in, manage their question bank, filter by topic or difficulty, and revise intelligently using a built-in revision system.
 
-The platform is built with a focus on productivity, fast navigation, and a clean developer-friendly workflow. With features like secure authentication, topic-based categorization, smart search, and a 5-question random revision mode, CodeVault becomes a reliable tool for interview preparation, algorithm practice, and long-term learning.
+The platform is built with a focus on productivity, fast navigation, and a clean developer-friendly workflow. With features like secure authentication, topic-based categorization, smart search, and a 5-question random revision mode, CodeBase becomes a reliable tool for interview preparation, algorithm practice, and long-term learning.
 
 --
 
