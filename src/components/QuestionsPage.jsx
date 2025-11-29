@@ -10,10 +10,10 @@ export function QuestionsPage() {
   const [editingQuestion, setEditingQuestion] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [topicFilter, setTopicFilter] = useState(() => {
-    // Check if there's a selected topic in localStorage (from HomePage)
+ 
     const selectedTopic = localStorage.getItem('selectedTopic');
     if (selectedTopic) {
-      // Clear the selected topic from localStorage after reading it
+      
       localStorage.removeItem('selectedTopic');
       return selectedTopic;
     }
@@ -29,7 +29,7 @@ export function QuestionsPage() {
       setTopicFilter(topicParam);
     }
     else {
-    setTopicFilter('all'); // ✅ reset filter when no ?topic=
+    setTopicFilter('all');  
   }
   }, [location.search]);
   
@@ -49,7 +49,7 @@ export function QuestionsPage() {
   });
 
   const filteredQuestions = useMemo(() => {
-    // normalize topic filter for case-insensitive comparison
+     
     const normalizedTopicFilter = topicFilter === 'all' ? 'all' : topicFilter.toLowerCase().trim();
     return questions.filter(question => {
       const matchesSearch = (question.name || '').toLowerCase().includes(searchQuery.toLowerCase());
@@ -72,7 +72,7 @@ export function QuestionsPage() {
     });
   }, [questions, searchQuery, topicFilter, difficultyFilter, statusFilter]);
 
-  // Group questions by topic
+ 
   const questionsByTopic = useMemo(() => {
     const grouped = {};
     filteredQuestions.forEach(question => {
