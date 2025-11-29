@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#1F2937" stroke="#3B82F6" stroke-width="4"/>
+  
+  <!-- Book/Vault icon -->
+  <g transform="translate(100, 100)">
+    <!-- Left book page -->
+    <path d="M -40 -30 L -16 -30 L -16 30 L -40 30 Z" fill="#60A5FA" stroke="#1E40AF" stroke-width="3"/>
+    <!-- Right book page -->
+    <path d="M 16 -30 L 40 -30 L 40 30 L 16 30 Z" fill="#93C5FD" stroke="#1E40AF" stroke-width="3"/>
+    <!-- Spine -->
+    <rect x="-16" y="-30" width="32" height="60" fill="#3B82F6" stroke="#1E40AF" stroke-width="3"/>
+    <!-- Lock icon on spine -->
+    <circle cx="0" cy="-10" r="6" fill="#FCD34D"/>
+    <rect x="-4" y="-4" width="8" height="8" fill="#FCD34D"/>
+  </g>
+</svg>
