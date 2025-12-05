@@ -14,7 +14,7 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://cdebase.netlify.app',
+    'https://codebse.netlify.app',
     'https://codebase-dusky.vercel.app/'
   ]
 }));
