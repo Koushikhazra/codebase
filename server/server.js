@@ -15,7 +15,7 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'https://cdebase.netlify.app',
-    'codebase-jn5ocfgyj-koushikhazras-projects.vercel.app'
+    'https://codebase-dusky.vercel.app/'
   ]
 }));
 
