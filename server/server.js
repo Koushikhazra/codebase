@@ -14,7 +14,8 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://cdebase.netlify.app'
+    'https://cdebase.netlify.app',
+    'codebase-jn5ocfgyj-koushikhazras-projects.vercel.app'
   ]
 }));
 
