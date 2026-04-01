@@ -12,11 +12,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'https://codebse.netlify.app',
-    'https://codebase-dusky.vercel.app'
-  ],
+  origin: true,
   credentials: true
 }));
 
